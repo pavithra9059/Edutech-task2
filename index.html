@@ -1,0 +1,212 @@
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NeoVerse AI Dashboard</title>
+</head>
+<body>
+<nav>
+<div class="logo">NeoVerse AI</div>
+<ul>
+<li><a href="#home">Home</a></li>
+<li><a href="#stats">Stats</a></li>
+<li><a href="#services">Services</a></li>
+<li><a href="#pricing">Pricing</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+<button class="theme-btn" onclick="toggleTheme()">
+Theme
+</button>
+</nav>
+<section class="hero" id="home">
+<div class="hero-content">
+<h1>Future of AI Innovation</h1>
+<p>
+Explore intelligent automation, futuristic analytics,
+AI-powered services and next-generation digital solutions
+through a visually immersive dashboard experience.
+</p>
+<a href="#services" class="btn">
+Explore Platform
+</a>
+</div>
+</section>
+<section id="stats">
+<h2 class="section-title">Platform Statistics</h2>
+<div class="stats">
+<div class="card">
+<div class="counter" data-target="250">0</div>
+<h3>AI Projects</h3>
+</div>
+<div class="card">
+<div class="counter" data-target="5000">0</div>
+<h3>Active Users</h3>
+</div>
+<div class="card">
+<div class="counter" data-target="120">0</div>
+<h3>Countries</h3>
+</div>
+<div class="card">
+<div class="counter" data-target="99">0</div>
+<h3>Success Rate %</h3>
+</div>
+</div>
+</section>
+<section id="services">
+<h2 class="section-title">AI Services</h2>
+<div class="services">
+<div class="service-card">
+<h3>🤖 AI Chatbot</h3>
+<p>Smart conversational assistant.</p>
+</div>
+<div class="service-card">
+<h3>🎨 Image Generator</h3>
+<p>Create stunning AI visuals.</p>
+</div>
+<div class="service-card">
+<h3>🎤 Voice Recognition</h3>
+<p>Real-time speech intelligence.</p>
+</div>
+<div class="service-card">
+<h3>💻 Code Generator</h3>
+<p>Generate optimized code instantly.</p>
+</div>
+<div class="service-card">
+<h3>📈 Predictive Analytics</h3>
+<p>Advanced forecasting system.</p>
+</div>
+<div class="service-card">
+<h3>🔒 Cyber Security AI</h3>
+<p>Threat detection automation.</p>
+</div>
+</div>
+</section>
+<section>
+<h2 class="section-title">Tech Roadmap</h2>
+<div class="timeline">
+<div class="timeline-item">
+<h3>2026</h3>
+<p>AI Automation Expansion</p>
+</div>
+<div class="timeline-item">
+<h3>2027</h3>
+<p>Quantum AI Integration</p>
+</div>
+<div class="timeline-item">
+<h3>2028</h3>
+<p>Global Smart Infrastructure</p>
+</div>
+<div class="timeline-item">
+<h3>2030</h3>
+<p>Autonomous Ecosystems</p>
+</div>
+</div>
+</section>
+<section id="pricing">
+<h2 class="section-title">Pricing Plans</h2>
+<div class="pricing">
+<div class="price-card">
+<h3>Starter</h3>
+<div class="price">$9</div>
+<p>Basic AI Tools</p>
+<a href="#" class="btn">Choose</a>
+</div>
+<div class="price-card">
+<h3>Professional</h3>
+<div class="price">$29</div>
+<p>Advanced Features</p>
+<a href="#" class="btn">Choose</a>
+</div>
+<div class="price-card">
+<h3>Enterprise</h3>
+<div class="price">$99</div>
+<p>Unlimited Access</p>
+<a href="#" class="btn">Choose</a>
+</div>
+</div>
+</section>
+<section id="contact">
+<h2 class="section-title">AI Communication Terminal</h2>
+<div class="contact-container">
+<div class="contact-info">
+<div class="info-card">
+ <span>📍</span>
+<h3>Global HQ</h3>
+<p>NeoVerse Innovation Center</p>
+</div>
+<div class="info-card">
+<span>🚀</span>
+<h3>Response Time</h3>
+<p>Within 24 Hours</p>
+</div>
+<div class="info-card">
+<span>🤖</span>
+<h3>AI Assistant</h3>
+<p>Available 24/7</p>
+</div>
+</div>
+<div class="terminal-card">
+<div class="terminal-header">
+<span class="dot red"></span>
+<span class="dot yellow"></span>
+<span class="dot green"></span>
+<p>neoverse@terminal.ai</p>
+</div>
+<form class="terminal-form">
+<input type="text" placeholder="Enter Your Name">
+<input type="email" placeholder="Enter Email">
+<input type="text" placeholder="Subject">
+<textarea rows="5" placeholder="Type your message to NeoVerse AI..."></textarea>
+<button type="submit">🚀 Transmit Message</button>
+</form>
+</div>
+</div>
+</section>
+<footer>
+<p>© 2026 NeoVerse AI Dashboard | Designed with HTML, CSS Grid, Flexbox & JavaScript</p>
+</footer>
+
+<script>
+
+function toggleTheme(){
+document.body.classList.toggle("light");
+}
+
+const counters=document.querySelectorAll(".counter");
+
+counters.forEach(counter=>{
+
+const update=()=>{
+
+const target=+counter.getAttribute("data-target");
+const count=+counter.innerText;
+
+const increment=target/100;
+
+if(count<target){
+counter.innerText=Math.ceil(count+increment);
+setTimeout(update,20);
+}else{
+counter.innerText=target;
+}
+}
+
+update();
+
+});
+
+document.querySelector(".contact-form")
+.addEventListener("submit",function(e){
+
+e.preventDefault();
+
+alert("Message Sent Successfully!");
+
+this.reset();
+
+});
+
+</script>
+
+</body>
+</html>
